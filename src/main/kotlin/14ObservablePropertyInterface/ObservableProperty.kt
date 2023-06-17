@@ -5,7 +5,6 @@ import kotlin.reflect.KProperty
 
 class LogObservableProperty<T>(param: T) : ObservableProperty<T>(param) {
 
-
     override fun beforeChange(property: KProperty<*>, oldValue: T, newValue: T): Boolean {
         println("before change property: ${property.name} from $oldValue  $newValue")
         return true
@@ -22,7 +21,7 @@ class Car(brand: String, year: Int) {
 }
 
 fun main() {
-    var car = Car("BMW", 2018)
+    val car = Car("BMW", 2018)
 
     car.brand = "Audi"
     println(car.brand)

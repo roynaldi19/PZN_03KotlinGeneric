@@ -8,7 +8,7 @@ fun copyContainer(from: Container<out Any>, to: Container<in Any>){ //memaksa ou
 
 fun main() {
     val container1 = Container("Roy")
-    val container2 = Container<Any>("Kidd")
+    val container2 = Container<Any>(123)
 
     copyContainer(container1, container2)
 }
